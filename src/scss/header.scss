@@ -10,13 +10,21 @@
 
   z-index: 50;
 
+  transition: all 0.3s ease 0s;
+
   @media (max-width:$mobile) {
     background-color: $headerColor;
   }
 
+  @media (min-width:$mobile) {
+    &._header-scroll {
+      background: rgba(71, 121, 184, )
+    }
+  }
+
   /* .header__container */
   &__container {
-    @include adaptiveValue("height", 52, 92);
+    @include adaptiveValue("height", 60, 60);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,7 +37,7 @@
     &__body {
       @media (max-width:$mobile) {
         position: fixed;
-        width: rem(250);
+        width: rem(300);
         height: 100%;
         top: 0;
         right: -75%;
@@ -92,14 +100,14 @@
       color: #fff;
 
       @media (max-width:$mobile) {
-        font-size: rem(20);
+        font-size: rem(18);
       }
 
       transition: color 0.3s ease 0s;
 
       @media (any-hover: hover) {
         &:hover {
-          color: $blueGreenColor;
+          color: #000;
         }
       }
     }
