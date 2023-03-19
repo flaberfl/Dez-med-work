@@ -557,8 +557,12 @@ swiper-sets-btn {
 .item-sets {
 
   &__wrapper {
-    // width: rem(400);
-    // margin: 0 auto;
+
+    @media (max-width:$mobile){
+      max-width: rem(315);
+      margin: 0 auto;
+        
+    }
   }
 
   &:hover {
@@ -620,11 +624,11 @@ swiper-sets-btn {
     background-color: #fff;
 
     img {
-      max-width: 100%;
-      margin: 0 auto;
+      // max-width: 100%;
+      // margin: 0 auto;
 
       @media (max-width:$tablet) {
-        max-width: 50%;
+        // max-width: 50%;
       }
     }
   }
