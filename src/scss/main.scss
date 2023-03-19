@@ -1,8 +1,14 @@
 .main {
-  background: url('@img/bg.jpg') right / cover no-repeat;
+  // background: url('@img/bg.jpg') right / cover no-repeat;
   position: relative;
   @include adaptiveValue("padding-top", 110, 110);
   @include adaptiveValue("padding-bottom", 110, 110);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: $btnColor;
+
+  background-position: 80%;
 
   /* .main__container */
   &__container {
@@ -25,11 +31,10 @@
   }
 
 
-
   /* .main__title */
   &__title {
     @include adaptiveValue("margin-bottom", 30, 24);
-    
+
     font-family: Open Sans;
     @include adaptiveValue("font-size", 40, 24);
     text-transform: lowercase;
@@ -698,9 +703,9 @@ swiper-sets-btn {
   &__footer {
     display: flex;
     justify-content: space-between;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    overflow: auto;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
+    overflow-x: auto;
 
     padding-bottom: rem(30);
     gap: rem(40);
@@ -775,12 +780,6 @@ swiper-sets-btn {
   }
 }
 
-.title {
-
-  /* .title_cat */
-  &_cat {}
-}
-
 .header-catalog {
 
   display: flex;
@@ -788,6 +787,11 @@ swiper-sets-btn {
   padding: rem(7) rem(35) rem(0);
   @include adaptiveValue("padding-right", 35, 10);
   @include adaptiveValue("padding-left", 35, 10);
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  // gap: rem(10);
+// 
 
   justify-content: space-between;
 
@@ -798,60 +802,14 @@ swiper-sets-btn {
     border-bottom: rem(3) solid #54A3C1;
   }
 
-  @media (max-width:$mobile) {
-    // display: none;
-  }
-
-  @media (max-width:$mobile) {
-    position: relative;
-    display: grid;
-    gap: rem(10);
-    padding: rem(18) 0;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: rem(200);
-      height: rem(1);
-      left: -4%;
-
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    &::before {
-      bottom: 0;
-    }
-
-    &::after {
-      top: 0;
-    }
-  }
-
   /* .header-catalog__title */
   &__title {
     padding-bottom: rem(17);
     position: relative;
 
+    min-width: rem(110);
+
     transition: all 0.3s ease 0s;
-
-    // @media (max-width:$mobile) {
-
-    //   .header-catalog__name {
-    //     font-size: rem(10);
-    //     color: #161616;
-
-    //     &:hover {
-    //       font-weight: 700;
-    //       text-decoration: underline;
-    //     }
-    //   }
-
-
-    //   .header-catalog__image {
-    //     display: none;
-    //   }
-    // }
 
     @media (min-width:$mobile) {
 
@@ -871,56 +829,16 @@ swiper-sets-btn {
         }
 
         font-weight: 600;
-
-        // border-bottom: rem(3) solid #335989;
       }
     }
-
-
-
-    // .mobile-list {
-    //   position: relative;
-    //   display: grid;
-    //   gap: rem(10);
-    //   padding: rem(18) 0;
-
-    //   &::before,
-    //   &::after {
-    //     content: '';
-    //     position: absolute;
-    //     width: rem(200);
-    //     height: rem(1);
-    //     left: -4%;
-
-    //     background: rgba(255, 255, 255, 0.5);
-    //   }
-
-    //   &::before {
-    //     bottom: 0;
-    //   }
-
-    //   &::after {
-    //     top: 0;
-    //   }
-
-    //   /* .mobile-list__link */
-    //   &__link {
-    //     font-size: rem(10);
-    //     color: #161616;
-
-    //     &:hover {
-    //       font-weight: 700;
-    //       text-decoration: underline;
-    //     }
-    //   }
-    // }
-
-
-
   }
 
   /* .header-catalog__image */
-  &__image {}
+  &__image {
+    @media (max-width:$mobile) {
+      display: none;
+    }
+  }
 
   /* .header-catalog__name */
   &__name {

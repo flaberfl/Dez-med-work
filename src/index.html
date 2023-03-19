@@ -6,25 +6,20 @@
 
 <body>
 
-	<div class="wrapper" data-tabs>
+	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<!-- style="background: url('@img/bg.jpg') cover / no-repeat" -->
-			<section class="main__page main">
+
+			<section class="main__page main" style="background-image: url('@img/bg.jpg')">
 				<div class="main__container">
 					<div class="main__body">
 						<div class="main__content">
 							<h1 class="main__title"> <span>для медицинских организаций</span>дезинфицирующие
 								средства</h1>
 
-							<!-- <div class="main__titles">
-								<h2 class="main__subtitle">для медицинских организаций </h2>
-								<h1 class="main__title">дезинфицирующие средства</h1>
-							</div> -->
-
 							<div class="main__buttons">
-								<a href="#" data-popup="#popup-submit" class="main__button button button_white">Быстрый заказ</a>
-								<a href="#" data-popup="#popup-fast" class="main__button button button_transp">Консультация</a>
+								<a href="#" data-popup="#popup-fast" class="main__button button button_white">Быстрый заказ</a>
+								<a href="#" data-popup="#popup-submit" class="main__button button button_transp">Консультация</a>
 							</div>
 						</div>
 						<div class="main__services">
@@ -210,8 +205,8 @@
 										</li>
 									</ul>
 
-									<button class="item-type-hospital__button button button_main" type="submit"
-										class="button">ЗАКАЗАТЬ</button>
+									<button data-popup="#popup-types-hospital" class="item-type-hospital__button button button_main"
+										type="submit" class="button">ЗАКАЗАТЬ</button>
 
 								</div>
 
@@ -293,8 +288,8 @@
 										</li>
 									</ul>
 
-									<button class="item-type-hospital__button button button_main" type="submit"
-										class="button">ЗАКАЗАТЬ</button>
+									<button data-popup="#popup-types-hospital" class="item-type-hospital__button button button_main"
+										type="submit" class="button">ЗАКАЗАТЬ</button>
 								</div>
 
 							</li>
@@ -339,8 +334,8 @@
 										</li>
 									</ul>
 
-									<button class="item-type-hospital__button button button_main" type="submit"
-										class="button">ЗАКАЗАТЬ</button>
+									<button data-popup="#popup-types-hospital" class="item-type-hospital__button button button_main"
+										type="submit" class="button">ЗАКАЗАТЬ</button>
 
 								</div>
 
@@ -421,7 +416,7 @@
 										</li>
 									</ul>
 
-									<button class="item-type-hospital__button button button_main" type="submit"
+									<button data-popup="#popup-types-hospital" class="item-type-hospital__button button button_main" type="submit"
 										class="button">ЗАКАЗАТЬ</button>
 								</div>
 							</li>
@@ -560,23 +555,21 @@
 											<div class="footer-item-sets__hospital hospital-item-sets">
 												<img class="hospital-item-sets__image" src="@img/type-hospital/federal-w.png"
 													alt="Федеральным больницам">
-												<p class="hospital-item-sets__name">Федеральным больницам</p>
+												<p class="hospital-item-sets__name">Федеральная больница</p>
 											</div>
 											<div class="footer-item-sets__hospital hospital-item-sets">
-												<img class="hospital-item-sets__image" src="@img/type-hospital/central-w.png" alt="Сетьевым
-				клиникам">
-												<p class="hospital-item-sets__name">Сетьевым
-													клиникам</p>
+												<img class="hospital-item-sets__image" src="@img/type-hospital/central-w.png"
+													alt="Медицинский центр">
+												<p class="hospital-item-sets__name">Медицинский центр</p>
+											</div>
+											<div class="footer-item-sets__hospital hospital-item-sets">
+												<img class="hospital-item-sets__image" src="@img/type-hospital/private-w.png" alt="Сеть клиник">
+												<p class="hospital-item-sets__name">Сеть клиник</p>
 											</div>
 											<div class="footer-item-sets__hospital hospital-item-sets">
 												<img class="hospital-item-sets__image" src="@img/type-hospital/private-w.png"
 													alt="Федеральным больницам">
-												<p class="hospital-item-sets__name">Частным клиникам</p>
-											</div>
-											<div class="footer-item-sets__hospital hospital-item-sets">
-												<img class="hospital-item-sets__image" src="@img/type-hospital/private-w.png"
-													alt="Федеральным больницам">
-												<p class="hospital-item-sets__name">Частным клиникам</p>
+												<p class="hospital-item-sets__name">Городская больница</p>
 											</div>
 										</div>
 									</div>
@@ -756,7 +749,7 @@
 				<div class="catalog__container">
 					<h2 class="catalog__title title title_cat">Каталог продукции</h2>
 
-					<div class="catalog__body">
+					<div class="catalog__body" data-tabs>
 						<nav data-tabs-titles class="catalog__header header-catalog">
 
 							<button type="button" class="header-catalog__title _tab-active">
