@@ -21,18 +21,14 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    // gap: rem(80);
     @include adaptiveValue("gap", 80, 60);
-    margin: 0 auto;  
+    margin: 0 auto;
+
     @media (max-width:$mobile) {
       flex-direction: column;
     }
   }
 
-  /* .main__content */
-  &__content {
-    // flex: 1 1 auto;
-  }
 
   /* .main__title */
   &__title {
