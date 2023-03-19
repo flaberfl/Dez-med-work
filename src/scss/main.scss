@@ -1,28 +1,38 @@
 .main {
   background: url('@img/bg.jpg') right / cover no-repeat;
   position: relative;
-  @include adaptiveValue("padding-top", 110, 194);
-  @include adaptiveValue("padding-bottom", 110, 212);
+  @include adaptiveValue("padding-top", 110, 150);
+  @include adaptiveValue("padding-bottom", 110, 110);
+  // padding-bottom: rem(200);
 
   // background-size: cover;
 
-  background-position: center center;
+  // background-position: center center;
 
   /* .main__container */
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
+
   }
 
   /* .main__body */
   &__body {
     display: flex;
     justify-content: space-between;
+    // gap: rem(80);
+    @include adaptiveValue("gap", 80, 60);
+    margin: 0 auto;  
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
   }
 
   /* .main__content */
-  &__content {}
+  &__content {
+    // flex: 1 1 auto;
+  }
 
   /* .main__title */
   &__title {
@@ -57,19 +67,17 @@
     }
   }
 
-  /* .main__button */
-  &__button {}
-
   /* .main__services */
   &__services {
 
     display: flex;
     flex-direction: column;
-    gap: rem(45);
+    @include adaptiveValue("gap", 45, 20);
     align-items: center;
 
     @media (max-width:$mobile) {
-      padding-top: rem(35);
+      flex-direction: row;
+      margin: 0 auto;
     }
   }
 }
@@ -78,6 +86,7 @@
 
 .contacts {
   margin-top: rem(-28);
+  @include adaptiveValue("margin-top", -28, -100);
   position: relative;
   z-index: 10;
 
@@ -574,7 +583,8 @@ swiper-sets-btn {
   /* .item-sets__item */
   &__item {
     display: flex;
-    align-items: center;justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 
   /* .item-sets__name */
@@ -629,7 +639,7 @@ swiper-sets-btn {
   padding: rem(8);
   // padding: rem(8) rem(5) rem(8) rem(88);
   row-gap: rem(6);
-width: 100%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.9);
 
 }
@@ -679,7 +689,7 @@ width: 100%;
     padding-top: rem(10);
     justify-self: center;
     grid-column: 2 span;
-    
+
     @include adaptiveValue("font-size", 18, 16);
     font-weight: 600;
     line-height: math.div(19, 16);
