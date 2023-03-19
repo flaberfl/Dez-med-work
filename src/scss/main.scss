@@ -1,13 +1,8 @@
 .main {
   background: url('@img/bg.jpg') right / cover no-repeat;
   position: relative;
-  @include adaptiveValue("padding-top", 110, 150);
+  @include adaptiveValue("padding-top", 110, 110);
   @include adaptiveValue("padding-bottom", 110, 110);
-  // padding-bottom: rem(200);
-
-  // background-size: cover;
-
-  // background-position: center center;
 
   /* .main__container */
   &__container {
@@ -30,24 +25,28 @@
   }
 
 
+
   /* .main__title */
   &__title {
     @include adaptiveValue("margin-bottom", 30, 24);
-
+    
     font-family: Open Sans;
-    @include adaptiveValue("font-size", 36, 20);
-    font-weight: 700;
-    line-height: math.div(49, 36);
-    color: #fff;
-    text-transform: uppercase;
+    @include adaptiveValue("font-size", 40, 24);
+    text-transform: lowercase;
+    color: #FFFEFE;
+    font-weight: 300;
 
     span {
+      padding-top: rem(30);
+      @include adaptiveValue("font-size", 46, 36);
+      font-weight: 700;
+      line-height: math.div(49, 36);
+      color: #fff;
+      text-transform: uppercase;
       display: inline-block;
-      @include adaptiveValue("font-size", 36, 16);
-      text-transform: lowercase;
-      color: #FFFEFE;
-      font-weight: 300;
     }
+
+
   }
 
   /* .main__buttons */
