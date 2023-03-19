@@ -1,8 +1,12 @@
 .main {
   background: url('@img/bg.jpg') right / cover no-repeat;
   position: relative;
-  @include adaptiveValue("padding-top", 100, 194);
-  @include adaptiveValue("padding-bottom", 100, 212);
+  @include adaptiveValue("padding-top", 110, 194);
+  @include adaptiveValue("padding-bottom", 110, 212);
+
+  // background-size: cover;
+
+  background-position: center center;
 
   /* .main__container */
   &__container {
@@ -143,17 +147,13 @@
 
 .time-contacts {
 
+  @media (max-width:$mobile) {
+    display: none;
+  }
+
   @media (min-width:$mobile) {
     padding-left: rem(27);
     padding-right: rem(52);
-  }
-
-  /* .time-contacts__title */
-  &__title {}
-
-  /* .time-contacts__list */
-  &__list {
-    // overflow: auto;
   }
 
   /* .time-contacts__item */
@@ -189,6 +189,43 @@
     }
   }
 }
+
+.social-contacts {
+
+  @media (min-width:$mobile) {
+    padding-left: rem(27);
+    padding-right: rem(52);
+  }
+
+  /* .social-contacts__list */
+  &__list {}
+
+  /* .social-contacts__item */
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: rem(8);
+
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  /* .social-contacts__icon */
+  &__icon {}
+
+  /* .social-contacts__name */
+  &__name {}
+}
+
+.time-contacts {
+
+  /* .time-contacts__title */
+  &__title {}
+}
+
 
 .production-contacts {
   padding-right: rem(27);
@@ -277,28 +314,15 @@
 
   /* .type-hospital__list */
   &__list {
-    // display: flex;
-    // @include adaptiveValue("column-gap", 63, 20);
+
+    padding: rem(5);
   }
 
   /* .type-hospital__item */
   &__item {}
 }
 
-.title {
-
-  /* .title_type */
-  &_type {}
-}
-
 .item-type-hospital {
-
-
-  @media (any-hover: hover) {
-    &:hover {
-      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
-    }
-  }
 
   &__wrapper {
     margin: 0 auto;
@@ -312,6 +336,18 @@
     background-color: #fff;
 
     transition: all 0.3s ease 0s;
+
+    @media (max-width:$mobile) {
+
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    }
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+      }
+    }
 
     @media (max-width:$mobile) {
       width: rem(312);
@@ -512,8 +548,8 @@ swiper-sets-btn {
 .item-sets {
 
   &__wrapper {
-    width: rem(312);
-    margin: 0 auto;
+    // width: rem(400);
+    // margin: 0 auto;
   }
 
   &:hover {
@@ -537,17 +573,26 @@ swiper-sets-btn {
 
   /* .item-sets__item */
   &__item {
-    @include adaptiveValue("font-size", 12, 7);
+    display: flex;
+    align-items: center;justify-content: center;
+  }
+
+  /* .item-sets__name */
+  &__name {
+    @include adaptiveValue("font-size", 14, 14);
+    font-weight: 700;
+    color: $blueGreenColor;
+    line-height: math.div(28, 14);
+  }
+
+  /* .item-sets__descr */
+
+  &__descr {
+    @include adaptiveValue("font-size", 12, 12);
     font-weight: 400;
     line-height: math.div(24, 12);
-
-    span {
-      @include adaptiveValue("font-size", 14, 9);
-      font-weight: 700;
-      color: $blueGreenColor;
-      line-height: math.div(28, 14);
-    }
   }
+
 
   /* .item-sets__image */
   &__image {
@@ -581,9 +626,10 @@ swiper-sets-btn {
 .list-item-sets {
   display: flex;
   flex-direction: column;
-  padding: rem(8) rem(70) rem(12) rem(18);
+  padding: rem(8);
+  // padding: rem(8) rem(5) rem(8) rem(88);
   row-gap: rem(6);
-  // overflow-y: scroll;
+width: 100%;
   background: rgba(255, 255, 255, 0.9);
 
 }
@@ -629,6 +675,18 @@ swiper-sets-btn {
     line-height: math.div(30, 20);
   }
 
+  &__for {
+    padding-top: rem(10);
+    justify-self: center;
+    grid-column: 2 span;
+    
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 600;
+    line-height: math.div(19, 16);
+    text-transform: none;
+    border-bottom: 1px solid #fff;
+  }
+
   /* .footer-item-sets__hospital */
   &__hospital {}
 
@@ -637,6 +695,9 @@ swiper-sets-btn {
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
+    overflow: auto;
+
+    padding-bottom: rem(30);
     gap: rem(40);
   }
 }

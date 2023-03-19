@@ -9,7 +9,7 @@
 	<div class="wrapper" data-tabs>
 		@@include('html/_header.htm',{})
 		<main class="page">
-
+			<!-- style="background: url('@img/bg.jpg') cover / no-repeat" -->
 			<section class="main__page main">
 				<div class="main__container">
 					<div class="main__body">
@@ -53,13 +53,29 @@
 								</li>
 							</ul>
 						</li>
-						<li class="contacts__item contacts__production production-contacts">
-							<h2 class="production-contacts__title contacts__title">Наше производство</h2>
-							<p class="production-contacts__text">У нас собственное производство, все процессы отлажены и выверены
-								до мелочей. </p>
-							<p class="production-contacts__text">Гарантированное
-								качество продукции и низкой цены.</p>
+
+						<li class="contacts__item contacts__social social-contacts">
+							<h2 class="social-contacts__title contacts__title">Контакты</h2>
+							<ul class="social-contacts__list">
+								<li class="social-contacts__item">
+									<img src="" alt="соц.сеть" class="social-contacts__icon">
+									<div class="social-contacts__name">WathsApp</div>
+								</li>
+								<li class="social-contacts__item">
+									<img src="" alt="соц.сеть" class="social-contacts__icon">
+									<div class="social-contacts__name">Viber</div>
+								</li>
+								<li class="social-contacts__item">
+									<img src="" alt="соц.сеть" class="social-contacts__icon">
+									<div class="social-contacts__name">Telegram</div>
+								</li>
+								<li class="social-contacts__item">
+									<img src="" alt="соц.сеть" class="social-contacts__icon">
+									<div class="social-contacts__name">Вконтакте</div>
+								</li>
+							</ul>
 						</li>
+
 						<li class="contacts__item contacts__contact contact-contacts">
 							<h2 class="ccontact-contacts__title contacts__title">Контакты</h2>
 							<ul class="contact-contacts__list">
@@ -329,7 +345,7 @@
 										<img src="@img/type-hospital/federal.png" alt="Фереральные больницы"
 											class="item-type-hospital__image">
 										<h30 class="item-type-hospital__title">Для федеральных больниц</h30>
-										<p class="item-type-hospital__text">Медицинские центры, клиники, нау0,чные исследовательские
+										<p class="item-type-hospital__text">Медицинские центры, клиники, научные исследовательские
 											организациии
 											НИИ федерального маштаба</p>
 									</div>
@@ -468,16 +484,58 @@
 					<div class="sets__body swiper swiper__sets">
 						<ul class="sets__list swiper-wrapper">
 							<li class="sets__item item-sets swiper-slide">
+
 								<div class="item-sets__wrapper">
 
 									<div class="item-sets__body">
 										<ul class="item-sets__list list-item-sets">
-											<li class="item-sets__item"><span>Меридиан</span> - концентрат для поверхностей</li>
-											<li class="item-sets__item"><span>Милис инструм</span> - концентрат для стерилизации</li>
-											<li class="item-sets__item"><span>Контакт</span> - концентрат для родильных отделений</li>
-											<li class="item-sets__item"><span>Контисепт форте</span> - дезинфицирующие салфетки</li>
-											<li class="item-sets__item"><span>Контисепт форте</span> - антисептик для персонала</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+											<li class="item-sets__item">
+												<p class="item-sets__name">Меридиан</p>
+												<p class="item-sets__descr"> - концентрат для поверхностей</p>
+											</li>
+
 										</ul>
+
 										<div class="item-sets__image">
 											<img src="@img/sets/set-0.png" alt="Комплект">
 										</div>
@@ -489,6 +547,7 @@
 												<div class="footer-item-sets__type">Премиум</div>
 											</h3>
 											<button class="button button_type" type="submit" class="button">Заказать</button>
+											<div class="footer-item-sets__for">Подходит для</div>
 										</div>
 
 										<div class="footer-item-sets__footer">
@@ -517,7 +576,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="sets__item item-sets swiper-slide">
+							<!-- <li class="sets__item item-sets swiper-slide">
 								<div class="item-sets__wrapper">
 
 									<div class="item-sets__body">
@@ -616,7 +675,7 @@
 										</div>
 									</div>
 								</div>
-							</li>
+							</li> -->
 						</ul>
 
 						<button type="button" class="swiper-types-btn swiper-types-btn_next"><svg width="19" height="25"
@@ -692,7 +751,7 @@
 					<h2 class="catalog__title title title_cat">Каталог продукции</h2>
 
 					<div class="catalog__body">
-						<nav data-tabs-titles class="catalog__header header-catalog" data-da=".menu__body,768">
+						<nav data-tabs-titles class="catalog__header header-catalog">
 
 							<button type="button" class="header-catalog__title _tab-active">
 								<img src="@img/catalog/title-01.png" alt="Концентраты" class="header-catalog__image">
