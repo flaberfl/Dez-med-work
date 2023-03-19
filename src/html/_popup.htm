@@ -43,6 +43,52 @@
 	</div>
 </div>
 
+<div id="popup-sets" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"></button>
+			<form action="#" class="form submit__form">
+
+				<h2 class="form__title">Оставить заявку</h2>
+
+				<div class="form__item">
+					<input autocomplete="off" type="text" name="name" data-required data-error="Не заполненное поле!"
+						placeholder="Имя" class="form__input input">
+				</div>
+
+				<div class="form__item">
+					<input autocomplete="off" type="text" name="phone" data-required data-error="Не заполненное поле!"
+						placeholder="Номер телефона" class="form__input input">
+				</div>
+
+				<div class="form__item">
+					<input autocomplete="off" type="text" name="mail" data-required data-error="Не заполненное поле!"
+						placeholder="E-mail" class="form__input input">
+				</div>
+
+				<div class="form__item">
+
+					<div class="custom-select input">
+						<select class="sel">
+							<option class="select-sets" value="0">Комплект</option>
+							<option class="select-sets" value="1">Премиум</option>
+							<option class="select-sets" value="2">Мидл</option>
+							<option class="select-sets" value="3">Экспресс</option>
+						</select>
+					</div>
+
+
+				</div>
+
+				<div class="form__item">
+					<button type="submit" class="form__button button button_type">Отправить</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+
 <div id="popup-types-hospital" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
@@ -74,12 +120,12 @@
 							<option class="select-hospital" value="1">Федеральная больница</option>
 							<option class="select-hospital" value="2">Частная клиника</option>
 							<option class="select-hospital" value="3">Медицинский центр</option>
-							<option class="select-hospital" value="3">Специализированная клиника</option>
-							<option class="select-hospital" value="3">Городская поликлиника</option>
-							<option class="select-hospital" value="3">Городская больница</option>
-							<option class="select-hospital" value="3">Стоматология</option>
-							<option class="select-hospital" value="3">Аптека</option>
-							<option class="select-hospital" value="3">Лаборатория</option>
+							<option class="select-hospital" value="4">Специализированная клиника</option>
+							<option class="select-hospital" value="5">Городская поликлиника</option>
+							<option class="select-hospital" value="6">Городская больница</option>
+							<option class="select-hospital" value="7">Стоматология</option>
+							<option class="select-hospital" value="8">Аптека</option>
+							<option class="select-hospital" value="9">Лаборатория</option>
 						</select>
 					</div>
 
