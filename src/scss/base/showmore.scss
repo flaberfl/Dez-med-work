@@ -1,0 +1,36 @@
+[data-showmore] {}
+
+[data-showmore-content] {}
+
+[data-showmore-button] {
+
+
+	@media (max-width:$mobile) {
+
+		height: rem(18);
+		width: rem(90);
+
+		border: 1px solid $btnColor;
+
+		color: $btnColor;
+		font-size: rem(10);
+		line-height: math.div(6, 5);
+		text-transform: uppercase;
+
+		span {
+			&:last-child {
+				display: none;
+			}
+
+			._showmore-active & {
+				display: none;
+
+				&:last-child {
+					display: block;
+				}
+			}
+		}
+	}
+
+
+}

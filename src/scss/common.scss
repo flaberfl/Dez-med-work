@@ -1,0 +1,105 @@
+// Заголовки, общие БЄМ блоки и проче...
+[class*="page__"] {
+  // @include adaptiveValue("padding-bottom", 90, 55);
+}
+
+.title {
+  position: relative;
+  padding-bottom: rem(28);
+  @include adaptiveValue("padding-bottom", 28, 15);
+  @include adaptiveValue("margin-bottom", 55, 32);
+
+  font-size: rem(26);
+  line-height: math.div(31, 26);
+  color: $titleColor;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: rem(3);
+
+    background-color: $blueGreenColor;
+  }
+
+  &_type,
+  &_solution,
+  &_sets {
+    &::after {
+      width: rem(257);
+    }
+  }
+
+  &_cat {
+    &::after {
+      width: rem(150);
+    }
+  }
+
+  &_70 {
+    &::after {
+      width: rem(70);
+    }
+  }
+}
+
+// .body-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//   @include adaptiveValue("gap", 30, 10);
+//   padding: 0px 35px;
+// }
+
+// .icon-grid {
+//   display: grid;
+//   place-items: center;
+//   height: 131px;
+
+//   border-radius: 5px;
+//   border: 1.7px solid rgba(200, 137, 230, .637);
+//   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, .137);
+//   opacity: .93;
+//   overflow: hidden;
+
+//   font-size: 4.5em;
+//   text-align: center;
+//   transition: all .4s ease 0s;
+
+//   @media (any-hover: hover) {
+//     &:hover {
+//       overflow: hidden;
+//       border: 2.2px solid rgba(197, 115, 230, .883);
+//       transform: scale(1.05);
+//     }
+//   }
+// }
+
+.vhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.desktop-hidden {
+  @media (min-width:$mobile) {
+    display: none !important;
+  }
+}
+
+.mobile-hidden {
+  @media (max-width:$mobile) {
+    display: none !important;
+  }
+}
+
+.m-mobile-hidden {
+  @media (max-width: em(360)) {
+    display: none !important;
+  }
+}

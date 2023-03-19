@@ -1,0 +1,97 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: 0px 0px;
+	align-items: center;
+	justify-content: center;
+
+	text-transform: uppercase;
+	border-radius: rem(2);
+	letter-spacing: 0.25em;
+	font-size: rem(12);
+	line-height: math.div(14, 12);
+
+	transition: all 0.3s ease 0s;
+
+	&_white {
+		padding: rem(20) rem(25);
+
+		background-color: #fff;
+
+		font-family: "Roboto";
+		color: $btnColor;
+
+		@media (max-width: em(360)) {
+			padding: rem(11) rem(12);
+
+			font-size: rem(8);
+		}
+	}
+
+	&_transp {
+		font-family: "Roboto";
+		padding: rem(18) rem(20);
+		border: 1px solid #fff;
+		color: #fff;
+
+		@media (max-width: em(360)) {
+			padding: rem(11) rem(12);
+
+			font-size: rem(8);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $btnColor;
+			}
+		}
+	}
+
+	&_type {
+		padding: rem(12) rem(25);
+
+		background-color: transparent;
+		border: 1px solid #fff;
+
+		color: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				box-shadow: 0 0 0 1px;
+			}
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(255, 255, 255, .2);
+		}
+	}
+
+	&_main {
+		padding: rem(12) rem(25);
+
+		background-color: $btnColor;
+		color: #fff;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #5e97df;
+			}
+		}
+	}
+
+	&_more {
+		// margin: 0 auto !important;
+		// margin-right: auto;
+		// margin-left: auto;
+		// margin-right: rem(100) !important;
+		// display: inline-block !important;
+		// margin-top: rem(50) !important;
+		// text-align: center !important;
+		// justify-items: center !important;
+	}
+}
