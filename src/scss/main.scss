@@ -802,7 +802,7 @@ swiper-sets-btn {
   box-shadow: 0px 0px 5px #C5E2F1;
 
 
-  @media (min-width:$mobile) {
+  @media (min-width:$tablet) {
     border-bottom: rem(3) solid #54A3C1;
   }
 
@@ -815,7 +815,7 @@ swiper-sets-btn {
 
     transition: all 0.3s ease 0s;
 
-    @media (min-width:$mobile) {
+    @media (min-width:$tablet) {
 
       &._tab-active,
       &:hover {
@@ -873,6 +873,8 @@ swiper-sets-btn {
         opacity: 1;
       }
     }
+
+
   }
 
   /* .product__list */
@@ -914,6 +916,10 @@ swiper-sets-btn {
 
     top: 0;
     right: 0;
+
+    img {
+      width: rem(35);
+    }
   }
 
   /* .product__volumes */
@@ -927,12 +933,17 @@ swiper-sets-btn {
 
   /* .product__volume */
   &__volume {
-    width: rem(37);
-    height: rem(37);
+    width: rem(60);
+    height: rem(60);
     display: grid;
     place-items: center;
 
     background-color: $btnColor;
+
+    @media (max-width:$mobile){
+       width: rem(80);
+       height: rem(80);
+    }
 
     /* .product__volume_1 */
     &_1 {}
@@ -946,7 +957,6 @@ swiper-sets-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: rem(26);
 
     img {
       max-width: 100%;
@@ -1023,6 +1033,10 @@ swiper-sets-btn {
   display: grid;
   row-gap: rem(14);
 
+  overflow-y: auto;
+
+
+
   box-shadow: rem(0) rem(0) rem(2) rem(2) rgba($btnColor, $alpha: .4);
 
   text-align: left;
@@ -1046,6 +1060,10 @@ swiper-sets-btn {
     align-items: center;
 
     gap: rem(15);
+
+    &:last-child{
+      margin-bottom: rem(5);
+    }
   }
 
   /* .list-product__image */
@@ -1061,6 +1079,7 @@ swiper-sets-btn {
   &__button {
     justify-self: center;
     align-self: start;
+    margin-top: rem(5);
   }
 }
 

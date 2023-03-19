@@ -75,6 +75,12 @@ body::after {
 
 	top: rem(-20);
 	right: rem(-475);
+	
+	@media (max-width: em(550)){
+		top: rem(-14);
+		right: rem(-455);
+	}
+
 
 	z-index: 999;
 
