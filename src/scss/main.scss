@@ -1010,25 +1010,23 @@ swiper-sets-btn {
   padding-top: rem(20);
   @include adaptiveValue("padding-bottom", 35, 20);
 
+  &__list {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
   /* .catalog-breadcrumbs__item */
   &__item {
     position: relative;
     display: inline-block;
-    padding-right: rem(38);
+    padding-right: rem(8);
 
     color: $btnColor;
     line-height: math.div(17, 14);
 
-    &:not(:last-child) {
-      &::after {
-        content: '';
-        position: absolute;
-        right: rem(6);
-        background: url('@img/a-right.svg') 0 0 no-repeat;
-        width: rem(25);
-        height: rem(8);
-        bottom: rem(3);
-      }
+    &_bg {
+      padding-left: rem(30);
     }
   }
 }
