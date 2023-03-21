@@ -964,14 +964,14 @@ swiper-sets-btn {
   &__banners {
     display: flex;
     // align-items: center;
-    align-items: flex-end;
-    // justify-content: center;
-
+    // align-items: flex-end;
+    justify-content: center;
+    
     flex: 1 1 auto;
-
+    
     img {
-      // max-width: 100%;
-      width: 100%;
+      max-width: 100%;
+      width: 50%;
     }
   }
 
