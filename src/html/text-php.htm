@@ -1,0 +1,222 @@
+<div class="swiper swiper__types">
+
+	<ul class="type-hospital__list swiper-wrapper">
+
+		<?php
+
+		$loop = CFS()->get('types_type');
+		
+		foreach ($loop as $row) {
+
+			?>
+
+
+		<!-- БЛОК ДЛЯ ДОБАВЛЕНИЯ ВНЕШНИЙ ЦИКЛ-->
+
+		<li class="swiper-slide type-hospital__item item-type-hospital item-type-hospital_1">
+			<div class="item-type-hospital__wrapper">
+
+				<div class="item-type-hospital__header">
+					<img src="<?= $row['hospital_image']; ?>" alt="Федеральные больницы" class="item-type-hospital__image">
+					<h3 class="item-type-hospital__title"><?= $row['hospital_title']; ?></h3>
+
+					<p class="item-type-hospital__text"><?= $row['hospital_text']; ?></p>
+
+
+				</div>
+				<ul class="item-type-hospital__list">
+
+
+
+					<?php
+
+
+					$loop2 = $row['type-list_item'];
+
+					foreach ($loop2 as $row2) {
+
+						?>
+
+					<!-- ПОД БЛОК ДЛЯ ДОБАВЛЕНИЯ ВНУТРЕННИЙ ЦИКЛ-->
+
+
+					<li class="item-type-hospital__row row-item-type">
+						<img src="<?= $row2['item-type_image']; ?>" alt="Item-01" class="row-item-type__image">
+						<div class="row-item-type__body">
+							<h4 class="row-item-type__title"><?= $row2['item-type_text']; ?></h4>
+							<p class="row-item-type__text"><?= $row2['item-type_title']; ?></p>
+						</div>
+					</li>
+
+					<?php
+			}
+			?>
+
+				</ul>
+
+				<button data-popup="#popup-submit_types" class="item-type-hospital__button button button_main" type="submit"
+					class="button">ЗАКАЗАТЬ</button>
+
+			</div>
+
+		</li>
+
+		<?php
+		}
+	?>
+
+
+
+
+
+
+
+
+
+
+		<div class="swiper swiper__types">
+
+			<ul class="type-hospital__list swiper-wrapper">
+
+				<?php
+	
+			$loop = CFS()->get('types_type');
+			
+			foreach ($loop as $row) {
+	
+				?>
+
+
+				<!-- БЛОК ДЛЯ ДОБАВЛЕНИЯ ВНЕШНИЙ ЦИКЛ-->
+
+				<!-- ОБЩИЙ СЛАЙД -->
+
+
+				<?php
+	
+	
+						$loop2 = $row['type-list_item'];
+	
+						foreach ($loop2 as $row2) {
+	
+							?>
+
+				<!-- ПОД БЛОК ДЛЯ ДОБАВЛЕНИЯ ВНУТРЕННИЙ ЦИКЛ-->
+
+
+				<!-- ВНУТРЕННИЙ СЛАЙД -->
+
+
+
+				<li class="item-type-hospital__row row-item-type">
+					<img src="<?= $row2['item-type_image']; ?>" alt="Item-01" class="row-item-type__image">
+					<div class="row-item-type__body">
+						<h4 class="row-item-type__title"><?= $row2['item-type_text']; ?></h4>
+						<p class="row-item-type__text"><?= $row2['item-type_title']; ?></p>
+					</div>
+				</li>
+
+				<?php
+				}
+				?>
+
+			</ul>
+
+			<button data-popup="#popup-submit_types" class="item-type-hospital__button button button_main" type="submit"
+				class="button">ЗАКАЗАТЬ</button>
+
+		</div>
+
+		</li>
+
+		<?php
+			}
+		?>
+
+
+
+
+
+
+
+
+
+		<section class="page__type-hospital type-hospital">
+			<div class="type-hospital__container">
+				<h2 class="type-hospital__title title title_type"><?= get_category( 7, ARRAY_A,)['name']; ?></h2>
+				<div class="swiper swiper__types">
+
+					<ul class="type-hospital__list swiper-wrapper">
+
+						<?php
+
+						$loop = CFS()->get('types_type');
+						
+						foreach ($loop as $row) {
+
+							?>
+
+						<li class="swiper-slide type-hospital__item item-type-hospital item-type-hospital_1">
+							<div class="item-type-hospital__wrapper">
+
+								<div class="item-type-hospital__header">
+									<img src="<?= $row['hospital_image']; ?>" alt="Федеральные больницы"
+										class="item-type-hospital__image">
+									<h3 class="item-type-hospital__title"><?= $row['hospital_title']; ?></h3>
+
+									<p class="item-type-hospital__text"><?= $row['hospital_text']; ?></p>
+
+								</div>
+								<ul class="item-type-hospital__list">
+
+
+
+									<?php
+
+
+									$loop2 = $row['type-list_item'];
+
+									foreach ($loop2 as $row2) {
+
+										?>
+
+									<li class="item-type-hospital__row row-item-type">
+										<img src="<?= $row2['item-type_image']; ?>" alt="Item-01" class="row-item-type__image">
+										<div class="row-item-type__body">
+											<h4 class="row-item-type__title"><?= $row2['item-type_title']; ?></h4>
+											<p class="row-item-type__text"><?= $row2['item-type_text']; ?></p>
+										</div>
+									</li>
+
+									<?php
+							}
+							?>
+
+								</ul>
+
+								<button data-popup="#popup-types-hospital" class="item-type-hospital__button button button_main"
+									type="submit" class="button">ЗАКАЗАТЬ</button>
+
+							</div>
+
+						</li>
+
+						<?php
+							
+						}
+
+
+						?>
+
+
+		</section>
+
+
+    <!-- вставить статическую картинку -->
+
+    <?php bloginfo('template_url'); ?>/assets/img/ 
+
+    <!-- вставить элементв в CFS -->
+
+
+<img src="<?= CFS()->get('header_logo'); ?>" alt="logo">
