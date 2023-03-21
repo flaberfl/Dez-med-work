@@ -900,6 +900,7 @@ swiper-sets-btn {
 
     img {
       width: 200%;
+      max-width: 100%;
 
       @media (max-width:$mobile) {
         width: 80%;
