@@ -977,9 +977,12 @@ swiper-sets-btn {
 
   /* .product__footer */
   &__footer {
-    padding: rem(12) rem(15);
+    padding: rem(12) rem(5);
     display: grid;
-    gap: rem(16)
+    // flex-direction: column;
+    // display: flex;
+    gap: rem(16);
+    // height: 100%;
   }
 
   /* .product__title */
@@ -991,10 +994,14 @@ swiper-sets-btn {
   }
 
   /* .product__descr */
-  &__descr {}
+  &__descr {
+    // flex: 1 1 100%;
+  }
 
   /* .product__button */
   &__button {
+    // flex: 1 1 auto;
+    // align-self: center;
     justify-self: center;
   }
 }
@@ -1081,7 +1088,7 @@ swiper-sets-btn {
 
 
 .docs {
-  @include adaptiveValue("padding-top", 42, 0);
+  // @include adaptiveValue("padding-top", 42, 0);
   @include adaptiveValue("padding-bottom", 60, 30);
   margin-bottom: rem(100);
 
