@@ -43,7 +43,7 @@
 
     span {
       padding-top: rem(30);
-      @include adaptiveValue("font-size", 46, 32);
+      @include adaptiveValue("font-size", 46, 30);
       font-weight: 700;
       line-height: math.div(49, 36);
       color: #fff;
@@ -887,9 +887,9 @@ swiper-sets-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: rem(240);
-    padding: rem(13) rem(30);
-    padding-left: rem(65);
+    height: rem(260);
+    // padding: rem(13) rem(30);
+    // padding-left: rem(65);
 
     background-color: #FBFBFB;
 
@@ -899,7 +899,14 @@ swiper-sets-btn {
     }
 
     img {
-      max-width: 100%;
+      width: 200%;
+
+      @media (max-width:$mobile) {
+        width: 80%;
+
+      }
+
+
     }
   }
 
@@ -1135,6 +1142,7 @@ swiper-sets-btn {
     span {
       display: inline-block;
       font-size: rem(20);
+      @include adaptiveValue("font-size", 20, 14);
       color: #000;
     }
   }
@@ -1462,7 +1470,7 @@ swiper-sets-btn {
   &__content {
     flex: 0 1 80%;
 
-    @media (max-width:$tablet){
+    @media (max-width:$tablet) {
       flex: 1 1 auto;
     }
   }
@@ -1478,11 +1486,11 @@ swiper-sets-btn {
     color: $mainColor;
 
   }
-  
+
   /* .contract-p__subtitle */
   &__subtitle {
     margin-bottom: rem(30);
-    
+
     font-size: rem(22);
     @include adaptiveValue("font-size", 22, 16);
     text-align: center;
@@ -1499,7 +1507,7 @@ swiper-sets-btn {
     padding: rem(30);
     background-color: rgba(255, 255, 255, .9);
 
-  display: grid;
+    display: grid;
 
   }
 
@@ -1518,10 +1526,7 @@ swiper-sets-btn {
 .main {
 
   /* .main__button */
-  &__button {
-    
-    
-  }
+  &__button {}
 }
 
 .button {

@@ -24,7 +24,8 @@
 
   /* .header__container */
   &__container {
-    @include adaptiveValue("height", 60, 60);
+    // @include adaptiveValue("height", 60, 60);
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
