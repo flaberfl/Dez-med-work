@@ -1075,6 +1075,7 @@ swiper-sets-btn {
 .docs {
   @include adaptiveValue("padding-top", 42, 0);
   @include adaptiveValue("padding-bottom", 60, 30);
+  margin-bottom: rem(100);
 
   background: url('@img/back-slider.jpg') right / cover no-repeat;
 
@@ -1445,8 +1446,8 @@ swiper-sets-btn {
 
 .contract-p {
 
-  padding-top: rem(110);
-  padding-bottom: rem(110);
+  padding-top: rem(30);
+  padding-bottom: rem(30);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -1454,30 +1455,73 @@ swiper-sets-btn {
   &__container {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
 
   /* .contract-p__content */
   &__content {
-    flex: 0 1 70%;
+    flex: 0 1 80%;
+
+    @media (max-width:$tablet){
+      flex: 1 1 auto;
+    }
   }
 
   /* .contract-p__title */
-  &__title {}
+  &__title {
+    margin-bottom: rem(15);
 
+    font-size: rem(30);
+    @include adaptiveValue("font-size", 30, 24);
+    text-align: center;
+    color: #fff;
+    color: $mainColor;
+
+  }
+  
   /* .contract-p__subtitle */
-  &__subtitle {}
+  &__subtitle {
+    margin-bottom: rem(30);
+    
+    font-size: rem(22);
+    @include adaptiveValue("font-size", 22, 16);
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: rem(30);
+    justify-self: center;
+    padding: rem(15) rem(45);
+  }
 
   /* .contract-p__list */
-  &__list {}
+  &__list {
+    padding: rem(30);
+    background-color: rgba(255, 255, 255, .9);
+
+  display: grid;
+
+  }
 
   /* .contract-p__item */
-  &__item {}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    font-size: rem(20);
+    @include adaptiveValue("font-size", 20, 15);
+    color: $blueGreenColor;
+  }
 }
 
 .main {
 
   /* .main__button */
-  &__button {}
+  &__button {
+    
+    
+  }
 }
 
 .button {
